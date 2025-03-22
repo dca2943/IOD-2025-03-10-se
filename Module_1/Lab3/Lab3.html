@@ -66,10 +66,9 @@
         />
 
         <h1 id="heading1">Hello</h1>
-        <button class="button column1-btn" onclick="changeColumn(1)">
+        <button class="button column1-btn" onclick="changeColumn1()">
           Change Me
         </button>
-        <input type="text" id="input1" placeholder="Hola" />
       </div>
 
       <div class="column" id="column2">
@@ -81,44 +80,34 @@
         />
 
         <h1 id="heading2">World</h1>
-        <button class="button column2-btn" onclick="changeColumn(2)">
+        <button class="button column2-btn" onclick="changeColumn2()">
           Change Me
         </button>
-        <input type="text" id="input2" placeholder="Mundo" />
       </div>
     </div>
 
     <!-- Link to External JS File -->
 
     <script>
-      // JS function to change the background color and heading text.
-      function changeColumn(columnNumber) {
-        const column = document.getElementById(`column${columnNumber}`);
-        const heading = column.querySelector("h2");
+      // Function to change background and heading text for Column 1
+      function changeColumn1() {
+        let column1 = document.getElementById("column1");
+        let heading1 = document.getElementById("heading1");
 
-        // Change background color based on the column number
-        switch (columnNumber) {
-          case 1:
-            column.style.backgroundColor = "#19a823"; // Light Green
-            heading.textContent = "Column 1 Changed";
-            break;
-          case 2:
-            column.style.backgroundColor = "#007b9e"; // Light Blue
-            heading.textContent = "Column 2 Changed";
-            break;
-        }
-        // Function to change Column 2 background color and heading text
-        function changeColumn2() {
-          const column2 = document.getElementById("column2");
-          const heading2 = document.getElementById("heading2");
+        // Change background color and heading text
+        column1.style.backgroundColor = "#f0f8ff"; // Light blue background
+        heading1.textContent = "Hola!";
+      }
 
-          column2.style.backgroundColor = "lightgreen"; // Change background color
-          header2.innerHTML = "New Heading for Column 2"; // Change heading text
-        }
+      // Function to change background and heading text for Column 2
+      function changeColumn2() {
+        let column2 = document.getElementById("column2");
+        let heading2 = document.getElementById("heading2");
+
+        // Change background color and heading text
+        column2.style.backgroundColor = "#fff0f0"; // Light pink background
+        heading2.textContent = "Mundo!";
       }
     </script>
-
-    <h4>Lab 3 Exercise Steps Link</h4>
-    <a href="http://127.0.0.1:5500/Module%201/Lab3/Lab3.html">Link</a>
   </body>
 </html>
