@@ -4,8 +4,8 @@ let myArray = [10, 20, 30, 40, 50];
 console.log(myArray);
 
 // Step 2: Replace the value of the element at position 1 and 4
-//The value at index 1 is changes to 100.
-//The value at index 4 is changes to 500.
+//The value at index 1 is changes to 25.
+//The value at index 4 is changes to 55.
 myArray[1] = 25; // Replace element at index 1
 myArray[4] = 55; // Replace element at index 4
 console.log(myArray);
