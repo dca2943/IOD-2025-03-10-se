@@ -6,7 +6,3 @@ Lab 1 Exercises
 • Change directory to the second folder, and print the current path
 • Change directory back to the original starting place
 • Delete the first folder
-
-<img src=:./images
-
->

@@ -4,3 +4,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
+
+{
+  //terminal
+"terminal.integrated.defaultProfile.windows": "Git Bash",
+}
+

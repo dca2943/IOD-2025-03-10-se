@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Module 1 Exercise 3</title>
+    <!-- Link to External CSS File -->
+
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+      }
+      .container {
+        display: flex;
+        min-height: 100vh;
+        align-items: stretch;
+      }
+      .column {
+        background: goldenrod;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+      }
+
+      .button {
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      .column1-btn {
+        background-color: #007b9e;
+        color: white;
+      }
+
+      .column1-btn:hover {
+        background-color: #19a823;
+      }
+
+      .column2-btn {
+        background-color: #19a823;
+        color: white;
+      }
+
+      .column2-btn:hover {
+        background-color: #007b9e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column" id="column1">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/021/826/377/original/cute-hello-speech-bubble-icon-simple-flat-illustration-vector.jpg"
+          alt="Image 1"
+          width="300"
+          height="200"
+        />
+
+        <h1 id="heading1">Hello</h1>
+        <button class="button column1-btn" onclick="changeColumn(1)">
+          Change Me
+        </button>
+        <input type="text" id="input1" placeholder="Hola" />
+      </div>
+
+      <div class="column" id="column2">
+        <img
+          src="https://img.freepik.com/premium-photo/globe-with-word-world-it-word-world-top_1007678-348.jpg"
+          alt="Image 1"
+          width="300"
+          height="200"
+        />
+
+        <h1 id="heading2">World</h1>
+        <button class="button column2-btn" onclick="changeColumn(2)">
+          Change Me
+        </button>
+        <input type="text" id="input2" placeholder="Mundo" />
+      </div>
+    </div>
+
+    <!-- Link to External JS File -->
+
+    <script>
+      // JS function to change the background color and heading text.
+      function changeColumn(columnNumber) {
+        const column = document.getElementById(`column${columnNumber}`);
+        const heading = column.querySelector("h2");
+
+        // Change background color based on the column number
+        switch (columnNumber) {
+          case 1:
+            column.style.backgroundColor = "#19a823"; // Light Green
+            heading.textContent = "Column 1 Changed";
+            break;
+          case 2:
+            column.style.backgroundColor = "#007b9e"; // Light Blue
+            heading.textContent = "Column 2 Changed";
+            break;
+        }
+        // Function to change Column 2 background color and heading text
+        function changeColumn2() {
+          const column2 = document.getElementById("column2");
+          const heading2 = document.getElementById("heading2");
+
+          column2.style.backgroundColor = "lightgreen"; // Change background color
+          heading2.innerText = "New Heading for Column 2"; // Change heading text
+        }
+      }
+    </script>
+
+    <h4>Lab 3 Exercise Steps Link</h4>
+    <a href="http://127.0.0.1:5500/Module%201/Lab3/Lab3.html">Link</a>
+  </body>
+</html>
