@@ -21,5 +21,5 @@ myArray.pop(); // Removes the last element
 console.log(myArray);
 
 // Step 5: Print the array to the console
-//The array is printed to the console as follows [5, 10, 25, 30, 40 ]
+//The array is printed to the console as follows [5, 10, 25, 30, 40]
 console.log(myArray);
