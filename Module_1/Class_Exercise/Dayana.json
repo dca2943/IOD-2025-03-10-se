@@ -1,0 +1,14 @@
+// objects in javascript contain keys (or properties) with corresponding values
+const user = {
+  first_name: "Dayana",
+  last_name: "Rosales",
+  age: 31,
+  followers: 888,
+};
+// we can access properties with dot notation
+console.log(user.first_name); // Dayana
+console.log(user.age); // 31
+// or with array style square bracket syntax
+console.log(user["last_name"]); // Rosales
+user.followers = 889; // we can also assign new values to object properties
+user.location = "Virginia"; // or create new properties
