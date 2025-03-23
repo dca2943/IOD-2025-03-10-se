@@ -3,13 +3,13 @@ let book = {
   title: "The Basics of JSON",
   description: "A book about JSON",
   author: "Dayana Rosales",
-  pages: 888,
+  pages: 8888,
 };
 // Printing individual properties
 console.log(book.title); // "The Basics of JSON"
 console.log(book.description); // "A book about JSON"
 console.log(book.author); // "Dayana Rosales"
-console.log(book.pages); // 888
+console.log(book.pages); // 8888
 
 // Print the whole book object
 console.log(book);
