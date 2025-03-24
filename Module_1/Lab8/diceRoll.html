@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Project-DevsInc</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+      }
+      select,
+      button {
+        font-size: 16px;
+        padding: 10px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dice Project-DevsInc</h1>
+    <label for="dice-type">Choose your dice:</label>
+    <select id="dice-type">
+      <option value="6">D6 (6 sides)</option>
+      <option value="10">D10 (10 sides)</option>
+      <option value="10">D10 (20 sides)</option>
+    </select>
+    <button onclick="rollDice()">Roll Dice</button>
+    <p id="result"></p>
+
+    <script src="diceRoll.js"></script>
+  </body>
+</html>
