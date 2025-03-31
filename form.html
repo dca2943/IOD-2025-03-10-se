@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <header>
+      <h1>The form element</h1>
+      <!-- Profile Form -->
+      <form method="POST" action="http://localhost:3000/profile">
+        <div>
+          <label for="fname">First name:</label>
+          <input type="text" id="first-name" name="first-name" required />
+        </div>
+        <br />
+        <div>
+          <label for="lname">Last name:</label>
+          <input
+            type="text"
+            id="last-name"
+            name="last-name"
+            required
+          /><br /><br />
+        </div>
+        <br />
+        <div>
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+
+      <!-- Favorite Coding Language -->
+      <div>
+        <p>Select your favorite coding language:</p>
+        <form method="POST" action="http://localhost:3000/profile">
+          <input type="radio" id="html" name="fav_language" value="HTML" />
+          <label for="html">HTML</label><br />
+          <input type="radio" id="css" name="fav_language" value="CSS" />
+          <label for="css">CSS</label><br />
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_language"
+            value="JavaScript"
+          />
+          <label for="javascript">JavaScript</label><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+      <!-- Vehicle Selection -->
+      <div>
+        <p>select the type of vehicle you own:</p>
+        <form method="POST" action="http://localhost:3000/profile">
+          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+          <label for="vehicle1"> I have a bike</label><br />
+          <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+          <label for="vehicle2"> I have a car</label><br />
+          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+          <label for="vehicle3"> I have a boat</label>
+        </form>
+      </div>
+      <!-- Car Dropdown -->
+      <div>
+        <form method="POST" action="http://localhost:3000/profile">
+          <label for="cars">Choose a car:</label>
+          <select name="cars" id="cars">
+            <option value="Toyota">Toyota</option>
+            <option value="Honda">Honda</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Audi">Audi</option>
+          </select>
+          <br />
+          <button type="submit">Submit form</button>
+        </form>
+      </div>
+
+      <!-- Navigation -->
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/index.html">Home</a>
+        <a href="./form.html">Form Page</a>
+      </nav>
+    </header>
+
+    <main></main>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>
