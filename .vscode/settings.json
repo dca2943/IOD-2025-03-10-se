@@ -4,5 +4,6 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   //terminal
-  "terminal.integrated.defaultProfile.windows": "Git Bash"
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "cSpell.words": ["distingishment"]
 }
