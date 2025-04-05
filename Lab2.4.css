@@ -1,0 +1,82 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #85beb8;
+  color: white;
+  text-align: left;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+section {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 3px solid #487d79;
+  border-radius: 12px;
+}
+
+.portfolio-github a {
+  font-size: 18px;
+  color: black;
+  text-decoration: underline;
+  padding: 10px;
+  border: 2px solid #85beb8;
+  border-radius: 5px;
+}
+
+.portfolio-github a:hover {
+  text-decoration: underline;
+  background-color: #487d79;
+  color: white;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  background-color: lightgray;
+  color: rgb(7, 7, 7);
+  padding: 20px;
+  font-size: 16px;
+}
+
+.container {
+  display: flex;
+  height: 50vh; /* Full height */
+}
+
+.personal-info {
+  width: 10%; /* Takes up 30% of the page width */
+  background-color: #487d79;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.personal-info img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.content {
+  width: 70%;
+  padding: 20px;
+}
+
+.skills,
+.experience {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+}
