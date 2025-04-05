@@ -1,279 +1,128 @@
-/* I. Selectors */
-/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
-article {
-  margin: 20px 0; /* Adds vertical spacing between articles */
-  padding: 10px; /* Adds space inside each article */
-  border: 5px solid red; /* Adds a solid black border around each article */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
 }
 
-<link rel="stylesheet" href="index.css" > .style-me1 {
-  color: red;
-}
-
-.style-me1 {
-  color: red;
-}
-
-#style-me2 {
-  color: blue;
-}
-
-#style-me2.style-me1 {
+a {
+  text-decoration: none;
   color: purple;
 }
 
-/* Put styles for questions 2.1 and 2.2 here */
-
-div p {
-  background-color: red;
+.background-1 {
+  background: #68b0ab;
 }
 
-.my-children-are-styled > p {
-  background-color: lightgreen;
+.background-2 {
+  background: #8fc0a9;
 }
 
-/* II. Box model and common properties */
-/* Put styles for questions 1-8 here */
-
-/* 4-Value Syntax*/
-.box-1 {
-  margin: 10px 20px 30px 40px; /* Top: 10px, Right: 20px, Bottom: 30px, Left: 40px */
-  padding: 5px 10px 15px 20px; /* Top: 5px, Right: 10px, Bottom: 15px, Left: 20px */
-  background-color: lightblue;
+.background-3 {
+  background: #c8d5b9;
 }
 
-/* 2-Value Syntax and using em*/
-.box-2 {
-  margin: 10px 20px; /* Top & Bottom: 10px, Left & Right: 20px */
-  padding: 1em 2em; /* Top & Bottom: 1em, Left & Right: 2em */
-  background-color: lightcoral;
+.background-4 {
+  background: #faf3dd;
 }
 
-/* 1-Value Syntax*/
-.box-3 {
-  margin: 15%; /* 15% of the parent element's width on all sides */
-  padding: 20px; /* 20px on all sides */
-  background-color: lightgreen;
+.m-20 {
+  margin: 20px;
 }
 
-/* using percentages*/
-.box-4 {
-  width: 80%; /* Box takes up 80% of the parent's width */
-  margin: 5% auto; /* Vertical margin is 5% of the parent's height, horizontal is centered */
-  padding: 2%; /* Padding is 2% of the parent's width */
-  background-color: lightblue;
-  border: 1px solid black;
+.h-80 {
+  height: 80px;
 }
 
-/* using (px) pixels*/
-.box-px {
-  width: 300px; /* width of 300 pixels */
-  height: 150px; /* height of 150 pixels */
-  background-color: lightblue;
+.h-400 {
+  height: 400px;
 }
 
-/* using (rem) pixels*/
-.box-rem {
-  width: 20rem; /* 20 times the root font size */
-  height: 10rem; /* 10 times the root font size */
-  background-color: lightcoral;
+.w-80 {
+  width: 80px;
 }
 
-/* using (vh) pixels*/
-.box-vh {
-  width: 50vw; /* 50% of the viewport's width */
-  height: 30vh; /* 30% of the viewport's height */
-  background-color: lightgreen;
+.flex-container {
+  display: flex; /* 2.1 */
 }
 
-/* using (vw) pixels*/
-.box-vw {
-  width: 80vw; /* 80% of the viewport's width */
-  height: 40vh; /* 40% of the viewport's height */
-  background-color: lightyellow;
+.flex-item-1 {
+  flex: 1;
 }
 
-/* example of a Dashed border */
-.box-dashed {
-  border: 4px dashed blue; /* A blue dashed border */
+.flex-item-2 {
+  flex: 2;
 }
 
-/* 4.1 box-sizing */
-.box-content {
-  box-sizing: content-box;
-  width: 300px;
-  height: 150px;
-  padding: 20px;
-  border: 10px solid black;
-}
-.box-border {
-  box-sizing: border-box;
-  width: 300px;
-  height: 150px;
-  padding: 20px;
-  border: 10px solid black;
+.flex-item-3 {
+  flex: 3;
 }
 
-/* 7.1 border-radius */
-
-.box {
-  border-radius: 20px; /* Rounded corners with pixel units */
+.flex-item-4 {
+  flex: 4;
 }
 
-.box {
-  border-radius: 1em; /* Rounded corners using em units */
+/* Compare how the HTML file looks in a browser before and after your changes. How does the value for the flex affect the size of the item? Items now resize dynamically based on available space. */
+
+/* Centering with flexbox, 3.1 */
+.flex-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
 }
 
-/* 2.3 example & main box w/boarder 3.1, 5.1, 6.1, 7.1,8.1 */
-.box {
-  background: url("./Module_2/Lab2.2/img1.png") no-repeat center/cover;
-  outline: 10px solid #4caf50; /*green outline */
-  width: 150px; /* Narrow width to force content overflow */
-  height: 150px !important; /* Force this height to override inline styles */
-  border: 10px solid black; /* solid black border */
-  border-radius: 20px; /* rounded corners with a radius of 20px */
-  padding: 20px; /* Adds some spacing inside the border */
-  background-color: grey; /*Main box: color used to visualize easier before img added */
-  overflow: visible; /* Ensures the overflow is visible outside the box */
+/* 4.1 &4.2 */
+.flex-space-between {
+  display: flex;
+  justify-content: space-between; /* The space-between value displays the flex items with space between them */
 }
 
-/* III. Positioning */
-/* Put styles for questions 1-3 here */
-.position-absolute {
-  position: absolute;
-  top: 0; /* Fixes the element to the top of the page */
-  background-color: lightblue; /* Adds a background color to make finding the absolutely positioned elements easier */
-}
-.position-relative {
-  position: relative; /* Makes this element a positioned container */
-  background-color: lightgray; /* Changed color to distinguish Relative positioning */
-  padding: 20px; /* Added padding for spacing */
+/* 5.1 */
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap; /* The wrap value specifies that the flex items will wrap if necessary */
 }
 
-/* How is absolute positioning within relative different from absolute that is outside of relative? */
-/* An element with position: absolute; is positioned relative to the nearest positioned ancestor */
-/* An element with position: relative; is positioned relative to its normal position */
-
-/* left position value to the .position-absolute class */
-.position-absolute {
-  position: absolute;
-  top: 50px;
-  left: 30px; /* Moves the element 30px from the left */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap-reverse; /*The wrap-reverse value specifies that the flex items will wrap if necessary, in reverse order*/
 }
 
-/* right position value to the .position-absolute class, places the element 30 pixels away from the left edge.*/
-.position-absolute {
-  position: absolute;
-  top: 50px;
-  right: 30px; /* Moves the element 30px from the right, The element now shifts 30 pixels away from the right edge instead of the left */
+.flex-basis-50 {
+  flex-basis: 50%; /* Each item takes up half the container's width */
+}
+.flex-item {
+  flex-basis: 25%; /* Each item takes up 25% of the container */
+  box-sizing: border-box; /* Ensures padding/borders don’t exceed the width */
 }
 
-.position-sticky {
-  position: sticky;
-  top: 50px; /* Adjust this value to change where the element 'sticks' */
-  padding: 10px; /* Gives it some space */
-  background-color: #cae8ca; /* for distinguishing */
-  border: 2px solid #4caf50;
+/* 6.1 */
+.flex-container {
+  display: flex;
+  flex-direction: row;
 }
 
-/* IV. Styling text */
-/* Put styles for questions 1-10 here */
-.text-style {
-  color: darkblue;
+/* 7.1 */
+.flex-menu {
+  display: flex;
+  justify-content: flex-end; /* Pushes items to the right */
+  justify-content: center;
+  align-items: center;
+
+  list-style-type: none;
+  gap: 3px;
 }
 
-.text-style {
-  font-size: 20px;
+.fourth-item {
+  order: 5;
 }
 
-.text-style {
-  line-height: 2.5;
+.background-3 {
+  width: 100px;
+  justify-content: center;
+  height: 50px;
+  text-align: center;
 }
 
-.text-style {
-  font-weight: bold; /* Experiment setting the font weight with both keyword */
-}
-
-.text-style {
-  font-weight: 800; /* Experiment setting the font weight with both weight , 800 (Extra Bold), 200 (Extra Light)*/
-}
-
-.text-style {
-  font-family: "Barriecito", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-style {
-  text-align: center; /* Text alignment, centers the text */
-}
-
-.text-style {
-  letter-spacing: 5px; /* Letter spacing, adds space between letters */
-}
-
-.text-style {
-  word-spacing: 10px; /* Word spacing, adds space between words */
-}
-
-.text-style {
-  text-transform: uppercase; /* Text transformation, converts all text to uppercase */
-}
-
-.text-style {
-  text-decoration: underline; /* Adds an underline to the text */
-}
-
-/* V. Styling links */
-/* Put styles for questions 1-3 here */
-/* Default link styles */
-a:link {
-  color: blue; /* font color */
-  font-size: 16px; /* text size */
-  font-weight: bold; /* text bolder */
-  text-decoration: none; /* Removes the underline */
-}
-a:hover,
-a:active,
-a:focus {
-  color: darkblue; /* Darker shade for emphasis */
-  text-decoration: underline; /* Adds an underline when active */
-}
-
-a:visited {
-  color: darkgray; /* Overriding the color for visited links */
-  font-style: italic; /* Using a different font-style value */
-}
-
-/* VI. calc() */
-/* Put styles for questions 1-3 here */
-
-.calc-style {
-  width: 100vw; /* New fixed width rule, makes the element as wide as the viewport */
-  overflow: hidden; /* Prevents content from overflowing outside of the screen (spilling outside) */
-  box-sizing: border-box; /* Ensures padding/margins don't increase width */
-}
-
-.calc-style {
-  width: calc(
-    100vw - 100px
-  ); /* New rule: width, makes the element 100px narrower than the viewport, subtracts 100px from the viewport width */
-  background-color: lightblue; /* Background color to the .calc-style class to easily see its boundaries */
-  box-sizing: border-box; /* Ensures padding doesn't affect width calculation */
-}
-
-.fixed-width-col {
-  width: 350px; /* Sets a fixed width */
-  display: inline-block; /* Ensures elements can sit side by side */
-  padding: 10px; /*spacing */
-  background-color: lightgray; /* for distinguishing */
-  box-sizing: border-box;
-}
-
-.fluid-col {
-  display: inline-block; /* Ensures side-by-side positioning */
-  width: calc(100vw - 350px); /* Makes the fluid column fill remaining space */
-  background-color: rgb(192, 230, 173); /* Another visual cue */
-  padding: 10px;
-  box-sizing: border-box;
+a {
+  color: black;
+  font-weight: bold;
 }
