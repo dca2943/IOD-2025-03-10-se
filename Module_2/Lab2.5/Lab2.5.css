@@ -1,0 +1,100 @@
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 14px;
+    margin: 0;
+    font-family: "Segoe UI";
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #f0f3f4;
+  }
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  background-color: #f0f3f4;
+}
+
+.sidebar {
+  width: 100%;
+  background-color: #f0f3f4;
+  color: #0f0606;
+}
+.sidebar .profile img {
+  display: block;
+  margin: auto; /* Centers the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar .contact-info,
+.sidebar .skills {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sidebar h1 {
+  background-color: #9ebcc0;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+.sidebar h2 {
+  background-color: #9ebcc0;
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.sidebar a,
+a:link {
+  color: #868c8c;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 5px;
+  transition: 0.3s ease-in;
+}
+.sidebar a:visited {
+  color: rgb(67, 115, 127);
+}
+.sidebar a:hover {
+  color: rgb(67, 115, 127);
+  text-decoration: underline;
+  font-weight: bold;
+}
+.sidebar a:active {
+  color: rgb(67, 115, 127);
+}
+.sidebar a:focus {
+  border: 1px solid black;
+}
+.content {
+  text-align: center;
+  width: 100%;
+  color: black;
+}
+.content h2 {
+  background-color: #9ebcc0;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+.content h3 {
+  margin-top: 15px;
+}
+footer {
+  font-size: 14px;
+  background-color: #9ebcc0;
+  border-bottom: 2px solid black;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  margin-top: 20px;
+}
