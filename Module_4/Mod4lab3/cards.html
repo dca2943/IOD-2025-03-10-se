@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #e3f2fd;
+        padding: 20px;
+      }
+      .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        background: white;
+        display: inline-block;
+        width: 250px;
+        text-align: center;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+      }
+      .portfolio-item img {
+        max-width: 100%;
+        height: auto;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+      }
+      .artist-container {
+        margin-top: 30px;
+        padding: 15px;
+        border: 2px solid #333;
+        background: white;
+        border-radius: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Container for Person Cards -->
+    <div id="person-list" class="container"></div>
+    <!-- Container for Artist Profile and Portfolio -->
+    <div id="artist-container" class="artist-container">
+      <h2>Artist Portfolio</h2>
+      <div id="artist-list" class="container"></div>
+    </div>
+
+    <script>
+      // People Array (Placed at the Top)
+      const data = [
+        { name: "Bob", age: 23 },
+        { name: "Alice", age: 39 },
+      ];
+
+      function addCard(name, age) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `<h2>${name}</h2><p>Age: ${age}</p>`;
+        document.querySelector("#person-list").appendChild(card);
+      }
+
+      data.forEach((person) => {
+        addCard(person.name, person.age);
+      });
+
+      // Artist Array (Placed at the Bottom)
+      const artists = [
+        {
+          name: "Van Gogh",
+          portfolio: [
+            {
+              title: "Portrait",
+              url: "https://collectionapi.metmuseum.org/api/collection/v1/iiif/436532/1671316/main-image",
+            },
+            {
+              title: "Sky",
+              url: "https://mymodernmet.com/wp/wp-content/uploads/2020/11/White-house-night-van-goh-worldwide-2.jpg",
+            },
+          ],
+        },
+      ];
+
+      function addArtistProfile(artist) {
+        const profile = document.createElement("div");
+        profile.className = "card";
+        profile.innerHTML = `<h2>${artist.name}</h2><p>Artist Profile</p>`;
+        document.querySelector("#artist-list").appendChild(profile);
+
+        artist.portfolio.forEach((item) => {
+          addPortfolioItem(item.title, item.url);
+        });
+      }
+
+      function addPortfolioItem(title, url) {
+        const itemCard = document.createElement("div");
+        itemCard.className = "card portfolio-item";
+        itemCard.innerHTML = `<h3>${title}</h3><img src="${url}" alt="${title}">`;
+        document.querySelector("#artist-list").appendChild(itemCard);
+      }
+
+      artists.forEach(addArtistProfile);
+    </script>
+  </body>
+</html>
