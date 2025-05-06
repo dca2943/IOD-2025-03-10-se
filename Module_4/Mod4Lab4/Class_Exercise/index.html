@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1"
+    />
+    <title>Bootstrap demo</title>
+
+    <!-- Link to Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/
+bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQ
+N+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Main heading -->
+    <h1>Bootstrap</h1>
+
+    <!-- Bootstrap Accordion Component -->
+    <div class="accordion" id="accordionExample">
+      <!-- First Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <!-- Button to toggle visibility of the first section -->
+          <button
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            Accordion Item #1
+          </button>
+        </h2>
+
+        <!-- Content inside the first section -->
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse show"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the first item’s accordion body.</strong> It is
+            shown by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+
+      <!-- Second Accordion Item -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <!-- Button to toggle visibility of the second section -->
+          <button
+            class="accordion-button collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseTwo"
+            aria-expanded="false"
+            aria-controls="collapseTwo"
+          >
+            Accordion Item #2
+          </button>
+        </h2>
+        <!-- Content inside the second section -->
+        <div
+          id="collapseTwo"
+          class="accordion-collapse collapse"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>This is the second item’s accordion body.</strong> It is
+            hidden by default, until the collapse plugin adds the appropriate
+            classes that we use to style each element. These classes control the
+            overall appearance, as well as the showing and hiding via CSS
+            transitions. You can modify any of this with custom CSS or
+            overriding our default variables. It’s also worth noting that just
+            about any HTML can go within the <code>.accordion-body</code>,
+            though the transition does limit overflow.
+          </div>
+        </div>
+      </div>
+       <!-- Bootstrap Card Component  1-->
+  <div class="card" style="width: 18rem; margin-top: 20px;">
+    <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Card image">
+    <div class="card-body">
+      <h5 class="card-title">Card Title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      This is some text within a card body.
+    </div>
+  </div>
+  <button type="button" class="btn btn-primary">Bootstrap Button</button>
+    <!-- Link to Bootstrap JavaScript Bundle -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bo
+otstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8I
+VInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
