@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>Module4 Lab6</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-center my-4">Eight of the Most Famous Artists</h1>
+      <nav class="navbar navbar-expand-lg bg-secondary">
+        <div class="container-fluid border border-black">
+          <div class="m-4 p-2 border border-black">
+            <a class="navbar-brand text-white" href="#">NavBar</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container my-5">
+      <div class="row justify-content-center">
+        <!-- Michelangelo -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://ts4.mm.bing.net/th?id=OIP.S2ql-SytVvtebGH9na33TAAAAA&pid=15.1"
+              class="card-img-top"
+              alt="Michelangelo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Michelangelo</h5>
+              <p class="card-text">
+                Master sculptor and painter, famous for David and the Sistine
+                Chapel ceiling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leonardo da Vinci -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://th.bing.com/th/id/OIP.UiCDxFOf80OshGOvn3aSDgHaKk?w=202&h=288&c=7&r=0&o=5&dpr=1.5&pid=1.7"
+              class="card-img-top"
+              alt="Leonardo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Leonardo da Vinci</h5>
+              <p class="card-text">
+                The Renaissance genius behind Mona Lisa and The Last Supper.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Claude Monet -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://www.antiquesandthearts.com/wp-content/uploads/2019/10/Claude-Monet-Waterlilies-and-Japanese-Bridge-1899_HIGH-RES.jpg"
+              class="card-img-top"
+              alt="Monet"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Claude Monet</h5>
+              <p class="card-text">
+                The father of Impressionism, best known for his Water Lilies
+                series.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Salvador Dalí -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://learnodo-newtonic.com/wp-content/uploads/2017/02/The-Persistence-of-Memory-1931-Salvador-Dali.jpg"
+              class="card-img-top"
+              alt="Dalí"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Salvador Dalí</h5>
+              <p class="card-text">
+                Surrealist icon famous for The Persistence of Memory.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vincent van Gogh -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://assets-global.website-files.com/63826902210b950303814c04/64c81bc2653eadf5a32477d3_Vincent_van_Gogh_169_(01).jpeg"
+              class="card-img-top"
+              alt="Van Gogh"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Vincent van Gogh</h5>
+              <p class="card-text">
+                Known for his expressive brushstrokes in Starry Night and
+                Sunflowers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pablo Picasso -->
+        <div class="col-md-4 mb-4">
+          <div class="card shadow h-100">
+            <img
+              src="https://art-facts.com/wp-content/uploads/2022/04/The-Weeping-Woman-Pablo-Picasso.jpg"
+              class="card-img-top"
+              alt="Picasso"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Pablo Picasso</h5>
+              <p class="card-text">
+                A pioneer of Cubism, creating works like Guernica and Les
+                Demoiselles d’Avignon.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- JSONPlaceholder Posts Section -->
+      <h2 class="text-center my-5">Recent Posts</h2>
+      <div class="row" id="posts-container">
+        <!-- Posts will be dynamically inserted here -->
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script to fetch and layout posts -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById("posts-container");
+
+        fetch("https://jsonplaceholder.typicode.com/posts?_limit=10")
+          .then((res) => res.json())
+          .then((posts) => {
+            posts.forEach((post) => {
+              const col = document.createElement("div");
+              col.className = "col-md-4 mb-4";
+              col.innerHTML = `
+              <div class="card h-100 shadow">
+                <div class="card-body">
+                  <h5 class="card-title">Post #${post.id}</h5>
+                  <h6 class="card-subtitle mb-2 text-primary">${post.title}</h6>
+                  <p class="card-text">${post.body}</p>
+                </div>
+              </div>
+            `;
+
+              container.appendChild(col);
+            });
+          })
+          .catch((error) => {
+            container.innerHTML = `<p class="text-danger">Failed to load posts.</p>`;
+            console.error("Fetch error:", error);
+          });
+      });
+    </script>
+  </body>
+</html>
