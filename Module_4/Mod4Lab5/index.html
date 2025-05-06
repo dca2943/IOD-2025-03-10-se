@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>News Feed</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #6eaedc;
+      }
+      .news-item {
+        border: 1px solid #060606;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #e3f2fd;
+      }
+      .news-title {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+      .news-content {
+        margin-top: 5px;
+        background-color: #d5d8db;
+      }
+      form {
+        margin-top: 20px;
+      }
+      input,
+      textarea {
+        display: block;
+        width: 300px;
+        margin-bottom: 10px;
+        background-color: #d5d8db;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Latest News</h1>
+    <div id="news-container"></div>
+
+    <h2>Add News Item</h2>
+    <form id="news-form">
+      <input type="text" id="title" placeholder="News Title" required />
+      <textarea id="content" placeholder="News Content" required></textarea>
+      <button type="submit">Add News</button>
+    </form>
+
+    <script>
+      let news = [
+        {
+          id: 1,
+          title: "Election Results",
+          content: "Newly elected minister...",
+        },
+        { id: 2, title: "Sporting Success", content: "World Cup winners..." },
+        {
+          id: 3,
+          title: "Tornado Warning",
+          content: "Residents should prepare...",
+        },
+      ];
+
+      const newsContainer = document.getElementById("news-container");
+      const newsForm = document.getElementById("news-form");
+      const titleInput = document.getElementById("title");
+      const contentInput = document.getElementById("content");
+
+      function renderNews() {
+        newsContainer.innerHTML = "";
+        news.forEach((item) => {
+          const newsDiv = document.createElement("div");
+          newsDiv.className = "news-item";
+
+          const title = document.createElement("div");
+          title.className = "news-title";
+          title.textContent = item.title;
+
+          const content = document.createElement("div");
+          content.className = "news-content";
+          content.textContent = item.content;
+
+          newsDiv.appendChild(title);
+          newsDiv.appendChild(content);
+          newsContainer.appendChild(newsDiv);
+        });
+      }
+
+      newsForm.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent form from reloading the page
+
+        const newTitle = titleInput.value.trim();
+        const newContent = contentInput.value.trim();
+
+        if (newTitle && newContent) {
+          // Add new news item
+          news.push({
+            id: news.length + 1,
+            title: newTitle,
+            content: newContent,
+          });
+
+          // Clear inputs
+          titleInput.value = "";
+          contentInput.value = "";
+
+          // Refresh news
+          renderNews();
+        }
+      });
+
+      // Initial render
+      renderNews();
+
+      // Re-render news every 5 seconds (simulate sync with dynamic source)
+      setInterval(renderNews, 5000);
+    </script>
+  </body>
+</html>
