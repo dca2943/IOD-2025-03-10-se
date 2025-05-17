@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destinations</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Animated airplane */
+      #plane {
+        position: absolute;
+        top: 50px;
+        left: -100px;
+        font-size: 2rem;
+        animation: flyAcross 10s linear infinite;
+      }
+
+      @keyframes flyAcross {
+        0% {
+          left: -100px;
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          left: 110%;
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="plane">✈️</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="signup.html">Create Account</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="destination.html">Plan Trip</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h2>Where to NEXT</h2>
+
+      <!-- Travel Planning Form -->
+      <form id="trip-form">
+        <label for="destination">Destination:</label>
+        <input
+          id="destination"
+          name="destination"
+          placeholder="Enter a destination"
+          required
+        />
+        <button type="button" id="randomize-btn">Anywhere</button><br /><br />
+
+        <label for="travelmonth">Travel Month:</label>
+        <input
+          type="month"
+          id="travelmonth"
+          name="travelmonth"
+          required
+        /><br />
+
+        <label for="travelers">Number of Travelers:</label>
+        <select id="travelers" name="travelers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option></select
+        ><br /><br />
+
+        <button type="button" id="get-itinerary-btn">Get Itinerary</button>
+      </form>
+
+      <div id="itinerary-display"></div>
+      <div id="saved-itinerary-display"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to CSS file -->
+    <style>
+      #plane {
+        position: absolute;
+        top: 50px;
+        left: -100px;
+        font-size: 2rem;
+        animation: flyAcross 10s linear infinite;
+      }
+
+      @keyframes flyAcross {
+        0% {
+          left: -100px;
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(10deg);
+        }
+        100% {
+          left: 110%;
+          transform: rotate(0deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="plane">✈️</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">Create Account</a></li>
+        <li><a href="index.html">Login</a></li>
+        <li><a href="destination.html">Plan Trip</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- About Us Content -->
+    <div class="container">
+      <!-- Container for the about us content -->
+      <h1>About Us 🌍</h1>
+      <h2>Welcome to NEXT!</h2>
+      <p>
+        NEXT is a <strong>Travelers Assistant Application. </strong> Designed to
+        make trip planning stress-free, fun, and organized.
+      </p>
+      <p>
+        Many travelers spend numerous hours researching, often feeling
+        overwhelmed by the endless information online.NEXT simplifies this
+        process.
+      </p>
+      <p>
+        Our mission is to provide an app that is personalized, fun, interactive,
+        organized, and assists travelers from the beginning of their trip to the
+        end. The app reduces the stress of travelers organizing a trip. Also,
+        reducing the amount of time travelers spend researching.
+      </p>
+      <p>NEXT increases organization, safety, and builds a community.</p>
+      <p>Use NEXT to plan your NEXT vacation and explore the world!</p>
+    </div>
+  </body>
+</html>

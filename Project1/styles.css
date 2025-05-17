@@ -1,0 +1,90 @@
+/* HTML includes CSS inside a <style> tag in the <head> section. (internal CSS) meaning the styles are directly embedded within the HTML file. */
+/* The <style> tag is used to define the CSS rules.*/
+/* The body selector applies styles to the entire body of the HTML document. */
+/* I have created a simple CSS file that styles the HTML elements. */
+/*Easier maintenance: Keeps HTML and CSS separate, making updates simpler.*/
+/* Better readability: Avoids clutter in your HTML file. */
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif; /* Sets the font for the entire document */
+  text-align: center; /* Centers text within the body */
+  background: url("https://storage.googleapis.com/pod_public/1300/159302.jpg")
+    center/cover no-repeat; /* Sets a background image with centering and covering */
+  color: white; /* Sets the text color to white */
+}
+
+/* Container box styling */
+.container {
+  max-width: 400px; /* Sets the maximum width of the container to 400px, the container will not get wider than 400 pixels, even if the screen is larger. However, if the screen is smaller, the container can shrink accordingly */
+  margin: 20px auto; /* Centers the container with auto margins,helps center the element within its parent. */
+  padding: 20px; /* Adds padding inside the container. creating space between the content inside the box and its edges. It ensures text and elements don’t touch the borders, making the design more readable and visually appealing. */
+  background: #84b3e1e6; /* Sets a light blue background color with some transparency */
+  border-radius: 8px; /* Rounds the corners of the container */
+}
+
+/* Input fields and buttons */
+input,
+button {
+  /* Applies styles to both input fields and buttons */
+  width: 90%; /* Sets the width of input fields and buttons to 90% of their parent container */
+  margin: 10px auto; /* Centers input fields and buttons */
+  padding: 10px; /* Adds padding inside input fields and buttons */
+  border-radius: 5px; /* Rounds the corners of input fields and buttons */
+  font-size: 16px; /* Sets the font size for input fields and buttons */
+}
+
+button {
+  /* Button styling */
+  background: #f6c069; /* Sets the background color of the button to a light orange */
+  color: white; /* Sets the text color of the button to white */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+}
+
+button:hover {
+  background: #0056b3; /* Changes the background color of the button on hover */
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 600px) {
+  /* Applies styles for screens smaller than 600px */
+  .container {
+    /* Adjusts the container for smaller screens */
+    max-width: 90%; /* Sets the maximum width of the container to 90% on smaller screens */
+  }
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #f6c069;
+  padding: 10px;
+}
+
+nav ul {
+  /* Styles for the navigation list */
+  /* The <ul> tag is used to create an unordered list. */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+}
+
+nav ul li {
+  /* The <li> tag is used to create a list item. */
+  display: inline;
+}
+
+nav ul li a {
+  /* The <a> tag is used to create a hyperlink. */
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px;
+}
+
+nav ul li a:hover {
+  /* Changes the background color of the link on hover */
+  background-color: #0056b3;
+  border-radius: 5px;
+}

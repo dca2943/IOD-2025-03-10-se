@@ -1,0 +1,43 @@
+[
+  {
+    "destination": "Paris, France",
+    "travelMonth": "06",
+    "travelers": 4,
+    "activities": ["Visit Eiffel Tower", "Louvre Museum", "Seine River Cruise"],
+    "accommodations": "Hotel Le Marais $$",
+    "transportation": ["Metro Pass", "Airport Transfer"],
+    "budgetEstimate": "$2,000 per person"
+  },
+  {
+    "destination": "New York, USA",
+    "travelMonth": "05",
+    "travelers": 2,
+    "activities": [
+      "Broadway Show",
+      "Central Park stroll",
+      "Statue of Liberty Tour",
+      "Empire State Building"
+    ],
+    "accommodations": "Manhattan Hotel $$",
+    "transportation": ["Subway Card", "Uber"],
+    "budgetEstimate": "$1,000 per person"
+  },
+  {
+    "destination": "Rome, Italy",
+    "travelMonth": "07",
+    "travelers": 6,
+    "activities": ["Colosseum Tour", "Vatican Museum", "Pasta Making Class"],
+    "accommodations": "Historic Villa $$$",
+    "transportation": ["City Bus Pass", "Bike Rental"],
+    "budgetEstimate": "$3,000 per person"
+  },
+  {
+    "destination": "London, UK",
+    "travelMonth": "08",
+    "travelers": 8,
+    "activities": ["London Eye Ride", "Tower of London", "Westminster Abbey"],
+    "accommodations": "Westminster Apartment Rental $$",
+    "transportation": ["Oyster Card", "Double-Decker Bus"],
+    "budgetEstimate": "$4,000 per person"
+  }
+]

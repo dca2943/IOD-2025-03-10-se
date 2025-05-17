@@ -1,0 +1,17 @@
+[
+  {
+    "username": "Bob",
+    "password": "Bob123",
+    "savedItineraries": []
+  },
+  {
+    "username": "Tom",
+    "password": "Tom123",
+    "savedItineraries": []
+  },
+  {
+    "username": "Dayana",
+    "password": "Day123",
+    "savedItineraries": []
+  }
+]
