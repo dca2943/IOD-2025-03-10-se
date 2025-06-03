@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div>Result: <span id="result"></span></div>
+  </body>
+  <script>
+    let num1 = 2;
+    let num2 = 4;
+    let operation = "subtract"; // Change to "subtract", "multiply", or "divide" as needed
+
+    fetch(`/calculator/${operation}?num1=${num1}&num2=${num2}`)
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("result").innerHTML = data.result;
+      });
+  </script>
+</html>
