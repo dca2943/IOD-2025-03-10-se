@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const friends = require("../models/friends");
+const friends = require("../model/freinds");
 
 // TODO - #1: Add support to the 'filter' endpoint for a new query parameter 'letter' which filters friends by starting letter
 // TODO - #2: Modify the 'info' route to only return the user-agent, content-type and accept header data
