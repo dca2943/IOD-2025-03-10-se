@@ -7,11 +7,19 @@ const addNumbers = (req, res) => {
 };
 
 const subtractNumbers = (req, res) => {
+  console.log("subtract number controller hit");
   let number1 = parseInt(req.query.num1);
   let number2 = parseInt(req.query.num2);
-  let difference = number1 - number2;
-  console.log(difference);
-  res.status(200).json({ result: difference });
+  try {
+    let difference = number1 - number2;
+    console.log(difference);
+    res.status(200).json({ result: difference });
+  } catch (err) {
+    console.error(`Error in subtractNumbers: ${err}`);
+    res
+      .status(400)
+      .json({ error: "calculator controller subtractNumbers failed" });
+  }
 };
 
 const multiplyNumbers = (req, res) => {
