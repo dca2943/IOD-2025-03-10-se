@@ -1,12 +1,25 @@
 import { useState } from "react";
-import { Welcome } from "./welcome";
+import { MoviesList } from "./MoviesList";
+import { Welcome } from "./welcome"; // Import Welcome Component
+import { BigCats } from "./BigCats"; // Import BigCats Component
+import { ComplexComment } from "./ComplexComment"; // Import ComplexComment Component
 import Greeting from "./Greeting"; // Import Greeting Component
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-function App() {
+const App = () => {
   const [count, setCount] = useState(0);
+  const testVariable = "This is a test variable"; // test variable to check if the app is working
+
+  const comment = {
+    date: new Date(),
+    text: "I hope you enjoy learning React!",
+    author: {
+      name: "Hello Kitty",
+      avatarUrl: "https://placekitten.com/g/64/64",
+    },
+  };
 
   return (
     <>
@@ -30,15 +43,24 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      {/* Using Greeting Component */}
+
+      {/* Greeting Components */}
       <Greeting name="Dayana"> - Hope you're having a great day!</Greeting>
       <Greeting> - Welcome to this app!</Greeting>
-      {/* Using Welcome Component */}
+
+      {/* Other Components */}
       <Welcome name="Dayana">
         <p>This is a child of Welcome</p>
       </Welcome>
+      <ComplexComment
+        date={comment.date}
+        text={comment.text}
+        author={comment.author}
+      />
+      <MoviesList />
+      <BigCats />
     </>
   );
-}
+};
 
 export default App;
