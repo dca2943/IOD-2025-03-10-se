@@ -1,0 +1,36 @@
+.quoteContainer {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background-color: #e6f4f9;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quoteContainer h2 {
+  color: #005f7a;
+  margin-bottom: 1rem;
+}
+
+.quoteContainer button {
+  background-color: #0099cc;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quoteContainer button:hover {
+  background-color: #0077aa;
+}
+
+.quoteText {
+  margin-top: 1.2rem;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #333;
+}

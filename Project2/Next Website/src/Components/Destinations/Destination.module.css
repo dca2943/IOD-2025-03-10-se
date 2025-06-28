@@ -1,0 +1,57 @@
+.DestinationCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.DestinationCard {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.DestinationCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.DestinationDetails {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 105%;
+  height: 10%;
+  padding: 0 30px;
+  color: #fff;
+  z-index: 2;
+}
+
+.DestinationDetails h3 {
+  font-size: 25px;
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.btns a {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btns a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

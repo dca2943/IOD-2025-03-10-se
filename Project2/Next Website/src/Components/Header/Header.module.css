@@ -1,0 +1,21 @@
+.header_wrapper {
+  margin-top: 160px;
+  padding: 0;
+}
+
+.imageContainer {
+  height: 480px;
+  width: 100%;
+  background-image: url(https://www.publicdomainpictures.net/pictures/260000/velka/airplane-sunset-travel.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 60px;
+  border-radius: 18px;
+}
+
+.imageContainer h2 {
+  font-size: 26px;
+  line-height: 60px;
+  color: #fffffe;
+  margin-top: 5px;
+}
