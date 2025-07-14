@@ -19,7 +19,7 @@ const Quotes = () => {
 
   return (
     <div className={styles.quoteContainer}>
-      <h2> Never Sop Exploring🌍</h2>
+      <h2> Never Stop Exploring🌍</h2>
       <button onClick={handleGenerate}>Inspire Me</button>
       {quote && <p className={styles.quoteText}>"{quote}"</p>}
     </div>

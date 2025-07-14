@@ -55,3 +55,10 @@
 .btns a:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
+
+.weather {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #2a3b4c;
+  font-style: italic;
+}
