@@ -1,38 +1,32 @@
+const {
+  add,
+  subtract,
+  multiply,
+  divide,
+} = require("../models/calculatorModel");
+
 const addNumbers = (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let sum = number1 + number2;
-  console.log(sum);
-  res.status(200).json({ result: sum });
+  const result = add(parseInt(req.query.num1), parseInt(req.query.num2));
+  res.status(200).json({ result });
 };
 
 const subtractNumbers = (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let difference = number1 - number2;
-  console.log(difference);
-  res.status(200).json({ result: difference });
+  const result = subtract(parseInt(req.query.num1), parseInt(req.query.num2));
+  res.status(200).json({ result });
 };
 
 const multiplyNumbers = (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-  let product = number1 * number2;
-  console.log(product);
-  res.status(200).json({ result: product });
+  const result = multiply(parseInt(req.query.num1), parseInt(req.query.num2));
+  res.status(200).json({ result });
 };
 
 const divideNumbers = (req, res) => {
-  let number1 = parseInt(req.query.num1);
-  let number2 = parseInt(req.query.num2);
-
-  if (number2 === 0) {
-    return res.status(400).json({ error: "Cannot divide by zero" });
+  try {
+    const result = divide(parseInt(req.query.num1), parseInt(req.query.num2));
+    res.status(200).json({ result });
+  } catch (error) {
+    res.status(400).json({ error: error.message });
   }
-
-  let quotient = number1 / number2;
-  console.log(quotient);
-  res.status(200).json({ result: quotient });
 };
 
 module.exports = {
