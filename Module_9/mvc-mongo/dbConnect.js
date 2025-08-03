@@ -5,7 +5,6 @@ require("dotenv").config();
 
 const uri = process.env.DB_URI || "mongodb://127.0.0.1:27017/myFirstDatabase";
 
-// Connect to MongoDB
 mongoose
   .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("✅ MongoDB Connected"))

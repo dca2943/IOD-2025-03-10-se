@@ -1,18 +1,34 @@
 require("dotenv").config(); // Load environment variables
 const express = require("express");
 const app = express();
-const dbConnect = require("./dbConnect");
+const { db } = require("./dbConnect");
+const User = require("./models/user");
+const userRoutes = require("./routes/userRoutes");
 
-// Parse requests of content-type: application/json
-app.use(express.json());
+app.use(express.json()); // Parse JSON requests
 
-// Simple home route
+// Home route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to my MongoDB application D Rosales." });
+  res.json({ message: "Welcome to my MongoDB application Rosales." });
 });
 
-// Start the server
+// Use user routes
+app.use("/api/users", userRoutes);
+
+// Create a new user
+app.post("/create-user", async (req, res) => {
+  try {
+    const newUser = new User(req.body);
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+// Start server
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}.`);
+  console.log(`🚀 Server is running on port ${PORT}`);
 });
+// Connect to MongoDB
