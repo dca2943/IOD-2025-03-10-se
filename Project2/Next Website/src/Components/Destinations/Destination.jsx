@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import destinationCSS from "./../Destinations/Destination.module.css";
 
-import destination01 from "./../../assets/destination01.jpg";
-import destination03 from "./../../assets/destination03.jpg";
-import destination04 from "./../../assets/destination04.jpg";
+import destination01 from "./../../assets/Homepage/destination01.jpg";
+import destination03 from "./../../assets/Homepage/destination03.jpg";
+import destination04 from "./../../assets/Homepage/destination04.jpg";
 
 const destinations = [
   { name: "Europe", image: destination01 },

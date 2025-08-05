@@ -1,0 +1,47 @@
+<input id="nickname" placeholder="Nickname" />
+<input id="message" placeholder="Message" />
+<ul id="messages"></ul>
+<div id="typing"></div>
+<div id="online-users"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io();
+  const nicknameInput = document.getElementById("nickname");
+  const messageInput = document.getElementById("message");
+  const messages = document.getElementById("messages");
+  const typing = document.getElementById("typing");
+  const online = document.getElementById("online-users");
+
+  nicknameInput.onchange = () => {
+    socket.emit("nickname", nicknameInput.value);
+  };
+
+  messageInput.onkeypress = () => {
+    socket.emit("typing");
+  };
+
+  messageInput.onkeydown = (e) => {
+    if (e.key === "Enter") {
+      socket.emit("message", messageInput.value);
+      messageInput.value = "";
+    }
+  };
+
+  socket.on("message", (msg) => {
+    messages.innerHTML += `<li>${msg}</li>`;
+  });
+
+  socket.on("chat", (msg) => {
+    messages.innerHTML += `<li>${msg}</li>`;
+  });
+
+  socket.on("typing", (msg) => {
+    typing.textContent = msg;
+    setTimeout(() => (typing.textContent = ""), 1000);
+  });
+
+  socket.on("online", (list) => {
+    online.textContent = "Online: " + list.join(", ");
+  });
+</script>

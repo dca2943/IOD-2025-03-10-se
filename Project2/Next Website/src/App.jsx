@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import "./App.css";
 import Destination from "./Components/Destinations/Destination";
@@ -15,6 +20,7 @@ function App() {
         <Nav />
         <Header />
         <Routes>
+          {/* Home Page */}
           <Route
             path="/"
             element={
@@ -24,11 +30,15 @@ function App() {
               </>
             }
           />
-          {/* Dynamic destination route */}
+
+          {/* Dynamic Destination Route */}
           <Route
             path="/destinations/:region"
             element={<DestinationDetails />}
           />
+
+          {/* Fallback for unmatched routes */}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
     </Router>

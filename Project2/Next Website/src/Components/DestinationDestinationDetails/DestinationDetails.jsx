@@ -1,61 +1,58 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import destinationdetailsCSS from "./DestinationDetails.module.css";
 
-import destination05 from "./../../assets/destination05.jpg";
-import destination06 from "./../../assets/destination06.jpg";
-import destination03 from "./../../assets/destination03.jpg";
-import destination04 from "./../../assets/destination04.jpg";
+// North America images
+import nyc from "./../../assets/Northamerica/destination09.jpg";
+import washington from "./../../assets/Northamerica/destination10.jpg";
+import NF from "./../../assets/Northamerica/Destination20.jpg";
+// Latin America images
+import cancun from "./../../assets/latinamerica/destination12.jpg";
+import rio from "./../../assets/latinamerica/destination13.jpg";
+import buenosaires from "./../../assets/latinamerica/destination14.jpg";
+
+// Europe images
+import london from "./../../assets/Europe/destination06.jpg";
+import paris from "./../../assets/Europe/destination07.jpg";
+import barcelona from "./../../assets/Europe/destination08.jpg";
+
+const regionDestinations = {
+  "north-america": [
+    { name: "New York City, USA", image: nyc },
+    { name: "Washington, D.C., USA", image: washington },
+    { name: "Niagara Falls, Canada", image: NF },
+  ],
+  "latin-america": [
+    { name: "Cancún, Mexico", image: cancun },
+    { name: "Rio de Janeiro, Brazil", image: rio },
+    { name: "Buenos Aires, Argentina", image: buenosaires },
+  ],
+  europe: [
+    { name: "London, United Kingdom", image: london },
+    { name: "Paris, France", image: paris },
+    { name: "Barcelona, Spain", image: barcelona },
+  ],
+};
 
 function DestinationDetails() {
+  const { region } = useParams();
+  const destinations = regionDestinations[region] || [];
+
   return (
     <div className={`${destinationdetailsCSS.Destination_Wrapper} section`}>
-      <h2>All Destinations</h2>
-
+      <h2>{region.replace("-", " ").toUpperCase()} Destinations</h2>
       <div className={destinationdetailsCSS.DestinationCards}>
-        {/* === Lisbon, Portugal === */}
-        <div className={destinationdetailsCSS.DestinationCard}>
-          <img src={destination05} alt="Europe destination" />
-          <div className={destinationdetailsCSS.DestinationDetails}>
-            <h3>Lisbon, Portugal</h3>
-            <div className={destinationdetailsCSS.btns}>
-              <Link to="/">Back Home</Link>
+        {destinations.map(({ name, image }) => (
+          <div className={destinationdetailsCSS.DestinationCard} key={name}>
+            <img src={image} alt={name} />
+            <div className={destinationdetailsCSS.DestinationDetails}>
+              <h3>{name}</h3>
+              <div className={destinationdetailsCSS.btns}>
+                <Link to="/">Back Home</Link>
+              </div>
             </div>
           </div>
-        </div>
-
-        {/* === London, United Kingdom === */}
-        <div className={destinationdetailsCSS.DestinationCard}>
-          <img src={destination06} alt="Asia destination" />
-          <div className={destinationdetailsCSS.DestinationDetails}>
-            <h3>London, United Kingdom</h3>
-            <div className={destinationdetailsCSS.btns}>
-              <Link to="/">Back Home</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* === Paris, France. === */}
-        <div className={destinationdetailsCSS.DestinationCard}>
-          <img src={destination03} alt="North America destination" />
-          <div className={destinationdetailsCSS.DestinationDetails}>
-            <h3>Paris, France.</h3>
-            <div className={destinationdetailsCSS.btns}>
-              <Link to="/">Back Home</Link>
-            </div>
-          </div>
-        </div>
-
-        {/* === Barcelona, Spain === */}
-        <div className={destinationdetailsCSS.DestinationCard}>
-          <img src={destination04} alt="Latin America destination" />
-          <div className={destinationdetailsCSS.DestinationDetails}>
-            <h3>Barcelona, Spain</h3>
-            <div className={destinationdetailsCSS.btns}>
-              <Link to="/">Back Home</Link>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
