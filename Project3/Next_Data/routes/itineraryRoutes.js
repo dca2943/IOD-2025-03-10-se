@@ -5,7 +5,7 @@ import {
   getDestinationById,
   updateDestination,
   deleteDestination,
-} from "../controllers/destinationController.js";
+} from "../controllers/itineraryController.js";
 
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-import Destination from "../models/Destination.js";
+import Destination from "../models/itinerary.js";
 
 //Create (POST) a new destination
 export const createDestination = async (req, res) => {

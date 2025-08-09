@@ -12,6 +12,7 @@ import Header from "./Components/Header/Header";
 import Nav from "./Components/Nav/Nav";
 import Quotes from "./Components/Quote/Quote";
 import DestinationDetails from "./Components/DestinationDestinationDetails/DestinationDetails";
+import Itineraries from "./Components/Itineraries/Itineraries"; // Itineraries component
 
 function App() {
   return (
@@ -31,11 +32,14 @@ function App() {
             }
           />
 
-          {/* Dynamic Destination Route */}
+          {/*  Destination Route */}
           <Route
             path="/destinations/:region"
             element={<DestinationDetails />}
           />
+
+          {/*  Itineraries Route */}
+          <Route path="/itineraries" element={<Itineraries />} />
 
           {/* Fallback for unmatched routes */}
           <Route path="*" element={<Navigate to="/" replace />} />

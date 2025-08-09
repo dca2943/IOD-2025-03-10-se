@@ -1,38 +1,38 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import navCSS from "./Nav.module.css";
 
 function Nav() {
   return (
     <div className={navCSS.Nav_wrapper}>
-      {/* ✈️ Flying airplane */}
       <span className={navCSS.airplane}>✈️</span>
 
       <div className={navCSS.Nav_wrapper_logo}>
-        <a href="#">NEXT</a>
+        <Link to="/">NEXT</Link>
       </div>
 
       <ul>
         <li>
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="#">Join Next</a>
+          <Link to="/join">Join Next</Link>
         </li>
         <li>
-          <a href="#">Login</a>
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          <a href="#">Destinations</a>
+          <Link to="/destinations">Destinations</Link>
         </li>
         <li>
-          <a href="#">Itineraries</a>
+          <Link to="/itineraries">Itineraries</Link>
         </li>
         <li>
-          <a href="#">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
       </ul>
 
-      <div className={navCSS.nav_btns}>{/* For future action buttons */}</div>
+      <div className={navCSS.nav_btns}>{/*  future action buttons */}</div>
     </div>
   );
 }
